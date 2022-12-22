@@ -2,6 +2,8 @@
 QUESTIONS:
 1. #2 why convert to string if we are working with numbers --> does not mention it being an array
 2. #4 why use indexOf? i tried using bracket notation to access the index value but didnt pass... how are we supposed to know this method?
+3. #5 make sure i understand in --> loops through object but no for keyword
+4. #6 is it because we want to see if each key exists we dont care about the value?  why not key[val] instead of val[key]
 */
 
 // SOME -- atleast one is true so return true for whole array
@@ -87,7 +89,11 @@ Examples:
     hasCertainKey(arr,'isCatOwner') // false
 */
 
-function hasCertainKey(arr, key) {}
+function hasCertainKey(arr, key) {
+    return arr.every((val) => {
+        return key in val;
+    });
+}
 
 /*
 6. Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.
@@ -105,4 +111,8 @@ Examples:
     
 */
 
-function hasCertainValue(arr, key, searchValue) {}
+function hasCertainValue(arr, key, searchValue) {
+    return arr.every((val) => {
+        return val[key] === searchValue;
+    });
+}
