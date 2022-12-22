@@ -4,6 +4,8 @@ QUESTIONS:
 2. #4 why use indexOf? i tried using bracket notation to access the index value but didnt pass... how are we supposed to know this method?
 3. #5 make sure i understand in --> loops through object but no for keyword
 4. #6 is it because we want to see if each key exists we dont care about the value?  why not key[val] instead of val[key]
+
+looking at the syntax is ok during interview
 */
 
 // SOME -- atleast one is true so return true for whole array
