@@ -33,6 +33,9 @@ Examples:
 */
 
 function hasAZero(num) {
+    //habit console log 
+    //they are converting a number to an array first
+    console.log(num.toString().split(""));
     return num.toString().split("").some((val) => {
         return val === "0";
     });
@@ -70,8 +73,12 @@ Examples:
 //     })
 // }
 
+//revist this in notes
 function hasNoDuplicates(arr) {
     return arr.every((val) => {
+        console.log('logging the val of array',val);
+        console.log('logging indexOf',arr.indexOf(val));
+        console.log('logging lastindexof', arr.lastIndexOf(val));
         return arr.indexOf(val) === arr.lastIndexOf(val);
     });
 }
@@ -91,6 +98,7 @@ Examples:
     hasCertainKey(arr,'isCatOwner') // false
 */
 
+// COMEBACK: using the IN operator not the FOR...IN not looping its checking if it exists
 function hasCertainKey(arr, key) {
     return arr.every((val) => {
         return key in val;
@@ -112,9 +120,15 @@ Examples:
     hasCertainValue(arr,'first','Elie') // false
     
 */
-
+// every value of each obj of array 
+//looking at the value of the array
+//if struggling with names change the names val -> obj
 function hasCertainValue(arr, key, searchValue) {
-    return arr.every((val) => {
-        return val[key] === searchValue;
+    return arr.every((obj) => {
+        console.log('the obj is', val);
+        console.log('the key is', key);
+        console.log('obj[key]', val[key])
+        // array [] for getting the value
+        return obj[key] === searchValue;
     });
 }
